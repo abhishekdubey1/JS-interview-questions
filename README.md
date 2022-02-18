@@ -81,3 +81,9 @@ function MyPromise(executor) {
   executor(resolve, reject);
 }
 ```
+4. Write a polyfill for fn.bind
+```
+Function.prototype.bind = Function.prototype.bind || function (obj, ...args) {
+  return (...newArgs) => this.apply(obj, [...args, ...newArgs]);
+};
+```
