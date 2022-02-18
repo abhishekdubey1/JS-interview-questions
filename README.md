@@ -1,7 +1,7 @@
 # JS-interview-questions
 
 1. Write polyfill for getElementsByClassName
-`
+```
     function getElementsByClassName(className) {
       const body = document.body;
       const result = [];
@@ -16,9 +16,9 @@
       traverse(body);
       return result;
     }
-`
+```
 2. Write polyfill of array.flat
-`
+```
 function flat(arr, depth = 1, output = []) {
   if (depth === -1) {
     output.push(arr);
@@ -34,9 +34,9 @@ function flat(arr, depth = 1, output = []) {
   }
   return output;
 }
-`
+```
 3. Write a polyfill of Promise
-`
+```
 function MyPromise(executor) {
   let onResolve;
   let onReject;
@@ -80,13 +80,13 @@ function MyPromise(executor) {
   }
   executor(resolve, reject);
 }
-`
+```
 4. Write a polyfill for fn.bind
-`
+```
 Function.prototype.bind = Function.prototype.bind || function (obj, ...args) {
   return (...newArgs) => this.apply(obj, [...args, ...newArgs]);
 };
-`
+```
 5.Rendering of a page:
 ```
 1. The rendering engine starts getting the contents of the requested
@@ -115,7 +115,7 @@ Function.prototype.bind = Function.prototype.bind || function (obj, ...args) {
 10. Reflow: When the changes affect document contents or structure, or element position, a reflow (or relayout) happens.
 ```
 6.
-`
+```
 fixed and sticky
 
 fixed position will not occupy any space in the body, so the next element(eg: an image) will be behind the fixed element.
@@ -124,9 +124,9 @@ sticky position occupies the space, so the next element will not be hidden behin
 
 position: relative
 it is similar to static but top, left, right, bottom are applied to the element with respect to its original position.
-`
+```
 7.
-`
+```
 lifecycle methods
 Mounting phase:
   constructor: first method that is called
@@ -145,9 +145,9 @@ Unmounting phase:
 Error handling:
   static getDerivedStateFromError(error)
   componentDidCatch(error, info)
-`
+```
 8.
-`
+```
 Responsive techniques:
 
 Leverage conditional loading.
@@ -159,9 +159,9 @@ Consider the landscape orientation.
 Keep the typography responsive.
 Leverage mobile devices' Native Hardware.
 Design for thumb.
-`
+```
 9.
-`
+```
 em: font-size is relative to the font-size of the current element
 rem: font-size is relative to the font-size of the root element
 `
@@ -170,20 +170,21 @@ rem: font-size is relative to the font-size of the root element
 Q. what is prototype
 Ans: prototype is a javascript object that is used to create objects. 
 prototype is a prototype object that is used to create objects.
-`
-11.`
+```
+11.
+```
 box-sizing
 content-box: width and height do not include padding and border
 border-box: width and height include the border, padding
-`
+```
 12.
-`animate using RAF`
+```animate using RAF```
 13.
-`
+```
 display: inline-block;
 Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
 
 Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
 
 Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
-`
+```
